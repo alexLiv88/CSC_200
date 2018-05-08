@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  New Perspectives on HTML5 and CSS3, 7th Edition
+  Tutorial 7
+  Case Problem 4
+
+  Millennium Computers
+  Author: Alexandrea Livings
+  Date:   03/11/2018
+
+  Filename:   mc_pc.html
+
+-->
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Millenium Computers Order</title>
+    <link href="mc_reset.css" rel="stylesheet" />
+    <link href="mc_styles2.css" rel="stylesheet" />
+    <link href="mc_forms.css" rel="stylesheet" />
+    <script src="mc_script.js"></script>
+</head>
+<body>
+    <header>
+        <h1 id="logo">Millenium Computers</h1>
+        <nav class="horizontal">
+            <ul id="navBar">
+                <li class="empty"></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a>
+                    <ul class="nav2">
+                        <li><a href="#">Company History</a></li>
+                        <li><a href="#">Our Employees</a></li>
+                        <li><a href="#">Something Else</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Shop</a>
+                    <ul class="nav2">
+                        <li><a href="#">Desktop Computers</a></li>
+                        <li><a href="#">Laptop Computers</a></li>
+                        <li><a href="#">Accessories</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Customer Service</a>
+                    <ul class="nav2">
+                        <li><a href="#">Order Inquiry</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Feedback</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">FAQ</a>
+                    <ul class="nav2">
+                    </ul>
+                </li>
+                <li class="empty"></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <p>Welcome to Millenium Computers one-stop-shop ordering form. A one-way ticket to your new computer!</p>
+        <hr>
+        <p>Our built-in 6 month warranty guarantees you will be satisfied with your purchase. Check out our FAQ section if you have questions about choosing your computer's specifications. The standard build options are pre-selected, if you just want a standard computer fill out only your personal info.</p>
+        <img id="computerPic" src="computer.jpg" alt="desktop computer" />
+        <p>If you have any questions about what your dream computer may look like don't hesitate to contact us. We stock the latest and greatest computing systems for your business' computational needs. Every business of the 21st century will need to have up to date computing systems. Everything from creating forms to storing your files is now being done with this technology. Don't wait to join the movement for computing savvy business professionals.</p>
+        </section>
+    <form id="cForm" action="http://www.mill_computers.com/orders/process.cgi" method="post" >
+        <fieldset id="custInfo">
+            <legend>Personal Info</legend>
+            <div class="formRow">
+                <label for="nameFirst">First Name*</label>
+                <input name="fName" id="nameFirst" type="text" placeholder="John" required/>
+                <label for="nameLast">Last Name*</label>
+                <input name="lName" id="nameLast" type="text" placeholder="Doe" required/>
+            </div>
+            <div class="formRow">
+            </div>
+            <div class="formRow">
+                <label for="street">Street Address</label>
+                <input name="street" id="street" type="text" placeholder="123 Wallabee Way" />
+                <label for="city">City</label>
+                <input name="city" id="city" type="text" placeholder="Rochester" />
+            </div>
+            <div class="formRow">
+                <label for="state">State</label>
+                <input name="state" id="state" type="text" placeholder="NY" />
+                <label for="zip">ZIP</label>
+                <input name="zip" id="zip" type="text" placeholder="14425"
+                 pattern="^\d{5}(-\d{4})?$" />
+            </div>
+            <div class="formRow">
+            </div>
+            <div class="formRow" id="phoneNum">
+                <label for="phone">Phone Number*</label>
+                <input name="phone" id="phone" type="text" placeholder=" (585) nnn-nnnn " required
+                pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" />
+            </div>
+        </fieldset>
+        <fieldset id="pcInfo">
+            <legend>Computer Specifications</legend>
+            <div class="formRow">
+                <div class="column">
+                    <label for="processor">Processor Speed</label>
+                    <select name="pSpeed" id="processor">
+                        <option value="3.2 GHz">3.2 GHz</option>
+                        <option value="4.0 GHz" selected>4.0 GHz</option>
+                        <option value="5.2 GHz">5.2 GHz</option>
+                    </select>
+                </div>
+                <div class="column">
+                    <label for="memory">Memory</label>
+                    <select name="mem" id="memory">
+                        <option value="1 GB">1 GB</option>
+                        <option value="2 GB">2 GB</option>
+                        <option value="4 GB" selected>4 GB</option>
+                        <option value="8 GB">8 GB</option>
+                    </select>
+                </div>
+                <div class="column">
+                    <label for="monSize">Monitor Size</label>
+                    <select name="monitor" id="monSize">
+                        <option value='15"'>15"</option>
+                        <option value='17"'>17"</option>
+                        <option value='19"' selected>19"</option>
+                        <option value='21"'>21"</option>
+                    </select>
+                </div>
+                <div class="column">
+                    <label for="harddrive">Hard Drive</label>
+                    <select name="hd" id="harddrive">
+                        <option value="240 GB">240 GB</option>
+                        <option value="500 GB">500 GB</option>
+                        <option value="750 GB">750 GB</option>
+                        <option value="1 TB">1 TB</option>
+                    </select>
+                </div>
+            </div>
+            <hr>
+            <div class="formRow">
+                <div class="stackedColumn">
+                    <label>DVD Burner</label>
+                    <fieldset class="optGroup">
+                        <label for="dvdYes">Yes</label>
+                        <input name="dvd" id="dvdYes" value="yes" type="radio" />
+                        <label for="dvdNo">No</label>
+                        <input name="dvd" id="dvdNo" value="no" type="radio" />
+                    </fieldset>
+                    <label>Tuner Card</label>
+                    <fieldset class="optGroup">
+                        <label for="tYes">Yes</label>
+                        <input name="tuner" id="tYes" value="yes" type="radio" />
+                        <label for="tNo">No</label>
+                        <input name="tuner" id="tNo" value="no" type="radio" />
+                    </fieldset>
+                    <label>Media Card</label>
+                    <fieldset class="optGroup">
+                        <label for="mYes">Yes</label>
+                        <input name="mcard" id="mYes" value="yes" type="radio" />
+                        <label for="mNo">No</label>
+                        <input name="mcard" id="mNo" value="no" type="radio" />
+                    </fieldset>
+                </div>
+                <div class="column" id="warrDiv">
+                    <label for="warranty" id="warrLabel" >Include a 24-month extended warranty?</label>
+                    <input name="warranty" id="warranty" type="checkbox">
+                </div>
+            </div>
+            <hr>
+            <div class="formRow" id="extraInfo">
+                    <label for="extra">Additional information or comments:</label>
+                    <textarea name="extra" id="info"></textarea>
+            </div>
+        </fieldset>
+        <div id="buttons">
+            <input type="submit" value="Send Order"/>
+            <input type="button" value="Contact Me" onclick="script" />
+            <input type="reset" value="Cancel Order" />
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,167 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML and CSS
+   Tutorial 7
+   Case Problem 4
+
+   Millenium Computers General Style Sheet
+  
+   Author: Alexandrea Livings
+   Date: 03/11/2018
+   
+   Filename: mc_styles2.css
+
+*/
+
+/* HTML AND BODY STYLES */
+
+html {
+    background-color: rgba(35, 130, 185, 0.897);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    background-color: white;
+    box-shadow: rgba(2, 96, 151, 0.897) 15px 0px 15px, rgba(2, 96, 151, 0.897) -15px 0px 15px, 
+        inset rgba(2, 96, 151, 0.377) 0px 0px 40px;
+    min-height: 100%;
+    margin: 0px auto;
+    min-width: 320px;
+    max-width: 1020px;
+    width: 100%;
+}
+body > section {
+    border-left: 3px double powderblue;
+    border-right: 3px double powderblue;
+
+}
+section > p {
+    display: block;
+    padding: auto 30px;
+}
+
+/* LOGO STYLES */
+#logo {
+    font: bold 36px 'Segoe UI', Robot;
+    letter-spacing: 1px;
+    padding: 10px;
+    text-decoration: underline;
+    background-color: rgba(2, 96, 151, 0.377);
+    color: white;
+    text-shadow: rgb(5, 102, 192) 2px 0px 5px;
+    padding-left: 80px;
+}
+
+/* NAV STYLES */
+
+hr { 
+    display: block;
+    width: 85%;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px inset grey;
+}
+nav {
+    margin: 0px auto;
+    width:100%;
+    background-color: rgba(4, 91, 141, 0.76);
+  }
+  
+  nav ul#navBar {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  nav ul#navBar>li {
+    padding: 5px 0;
+    height: 100%;
+    position: relative;
+    
+  }
+  
+  nav ul#navBar>li>a {
+    font-size: 1.2em;
+    padding: 0px 20px;
+    color: white;
+    border-left: 2px solid powderblue;
+    border-right: 2px solid powderblue;
+  }
+  
+  ul#navBar>li:hover:not(.empty) a {
+    background-color: rgb(8, 87, 133);
+  }
+  
+  ul.nav2 { 
+      padding-top:1;
+      width: 100%;
+      position: absolute;
+      display:none;
+      box-shadow: rgba(4, 67, 104, 0.76) 2px 2px 5px, rgba(4, 67, 104, 0.76) -2px 2px 5px;
+  }
+
+ul.nav2 li a {
+    display:block;
+    width:100%;
+    color:white;
+    background-color:rgba(10, 166, 187, 1);
+    font-size:1em;
+    padding: 2px 2px;
+    text-decoration:none;
+    text-align:left;
+    line-height:1.4em;
+    border: 1px solid black;
+    border-bottom: none;
+    text-align: center;
+}
+
+ul.nav2 li:last-of-type a {
+    border-bottom: 1px solid black;
+}
+
+header ul.nav2 > li > a:hover {
+    color: black;
+}
+
+
+/* FLEX STYLES FOR NAVBAR */
+
+nav.horizontal ul#navBar {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+}
+
+nav.horizontal ul#navBar > li {
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+nav.horizontal ul#navBar >li:first-of-type, nav.horizontal ul#navBar > li:last-of-type {
+    -webkit-flex: 4 1 auto;
+    flex: 4 1 auto;
+}
+
+#navBar > li a:hover+ul, nav.horizontal ul.nav2:hover {
+    display: block;
+}
+
+/* IMAGES */
+img {
+    display: block;
+    margin: 10px auto;
+    width: 240px;
+    border: 2px solid rgba(2, 96, 151, 0.377);
+    box-shadow: rgba(2, 96, 151, 0.377) 2px 2px 2px, rgba(2, 96, 151, 0.377) -2px -2px 2px;
+}
+
+/* BODY TEXT */
+
+p{
+    margin: 20px 70px;
+    text-align: center;
+}
